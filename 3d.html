@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ست سه‌بعدی آرنست</title>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<style>
+body {
+  margin: 0;
+  background: #111;
+  color: #f5f0e8;
+  font-family: Tahoma, Arial, sans-serif;
+  text-align: center;
+}
+header {
+  padding: 22px;
+  color: #d8b477;
+  border-bottom: 1px solid #444;
+  font-size: 25px;
+  font-weight: bold;
+}
+main { padding: 22px 14px; }
+h1 { font-size: 25px; }
+p { color: #ccc; line-height: 2; }
+model-viewer {
+  width: 100%;
+  height: 60vh;
+  min-height: 350px;
+  background: #202020;
+  border-radius: 18px;
+  --poster-color: #202020;
+}
+button {
+  margin: 8px 3px;
+  padding: 12px 17px;
+  border: 1px solid #d8b477;
+  border-radius: 25px;
+  background: #d8b477;
+  color: #111;
+  font-size: 14px;
+}
+a { color: #d8b477; }
+</style>
+</head>
+<body>
+<header>ARENSETT</header>
+<main>
+<h1>ست تیشرت و شلوارک آبی‌دودی</h1>
+<p>لباس را لمس کن و بچرخان تا از زاویه‌های مختلف ببینی.</p>
+
+<model-viewer
+  id="garment"
+  src="./3d-model.glb"
+  alt="مدل سه‌بعدی لباس آرنست"
+  camera-controls
+  auto-rotate
+  shadow-intensity="1"
+  exposure="1"
+  camera-orbit="0deg 75deg auto">
+</model-viewer>
+
+<button onclick="setView('0deg 75deg auto')">نمای جلو</button>
+<button onclick="setView('90deg 75deg auto')">نمای بغل</button>
+<button onclick="setView('180deg 75deg auto')">نمای پشت</button>
+<p>
+<a href="https://wa.me/989358049597">سفارش و استعلام در واتساپ</a>
+</p>
+<p><a href="./">بازگشت به فروشگاه</a></p>
+</main>
+<script>
+function setView(angle) {
+  document.getElementById('garment').cameraOrbit = angle;
+}
+</script>
+</body>
+</html>
