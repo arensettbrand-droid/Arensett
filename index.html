@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fa" dir="rtl" data-theme="light">
-<head>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+ <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0c2b24"><meta name="description" content="Arensett — Modern Menswear">
 <title>Arensett | Modern Menswear</title>
@@ -39,7 +40,18 @@
 </section>
 
 <section class="container" id="about"><div class="benefits"><div class="benefit"><span class="ico">♡</span><div><b>خرید مطمئن</b><small>اطلاعات روشن</small></div></div><div class="benefit"><span class="ico">♢</span><div><b>کیفیت منتخب</b><small>توجه به جزئیات</small></div></div><div class="benefit"><span class="ico">↺</span><div><b>پیگیری سفارش</b><small>در نسخه متصل</small></div></div><div class="benefit"><span class="ico">☏</span><div><b>پشتیبانی</b><small>پاسخ‌گویی به مشتری</small></div></div></div></section></main>
-<footer class="footer"><div class="container footer-inner"><a class="brand" href="#home"><span><span class="wordmark">Arensett</span><small>MODERN MENSWEAR</small></span></a><div class="footer-links"><a href="#home">خانه</a><a href="#products">محصولات</a><a href="#virtual">پرو مجازی</a><a href="#club">باشگاه مشتریان</a><a href="https://instagram.com/arensett.brand" target="_blank" rel="noopener">اینستاگرام</a><a href="https://wa.me/989358049597" target="_blank" rel="noopener">واتساپ</a></div><p>© ۲۰۲۶ Arensett · Modern Menswear</p></div></footer>
+<section id="model3d" style="padding:24px 16px;max-width:900px;margin:auto">
+  <h2>نمای سه‌بعدی</h2>
+  <model-viewer
+    src="3d-model.glb"
+    alt="محصول Arensett"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1"
+    style="width:100%;height:420px">
+  </model-viewer>
+</section>
+ <footer class="footer"><div class="container footer-inner"><a class="brand" href="#home"><span><span class="wordmark">Arensett</span><small>MODERN MENSWEAR</small></span></a><div class="footer-links"><a href="#home">خانه</a><a href="#products">محصولات</a><a href="#virtual">پرو مجازی</a><a href="#club">باشگاه مشتریان</a><a href="https://instagram.com/arensett.brand" target="_blank" rel="noopener">اینستاگرام</a><a href="https://wa.me/989358049597" target="_blank" rel="noopener">واتساپ</a></div><p>© ۲۰۲۶ Arensett · Modern Menswear</p></div></footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <div class="modal-backdrop" id="tryModal" role="dialog" aria-modal="true" aria-labelledby="tryTitle"><div class="modal"><button class="modal-close" data-close="tryModal" aria-label="بستن">×</button><div class="eyebrow">SMART STYLE STUDIO</div><h2 id="tryTitle">پرو مجازی لباس</h2><p class="modal-sub">عکس خودت را انتخاب کن و لباس موردنظرت را مشخص کن.</p><div class="try-grid"><div><label class="field-label">عکس خودت</label><div class="upload-zone"><div id="uploadPlaceholder"><div class="placeholder-icon">♧</div><b>برای انتخاب عکس لمس کن</b><p>عکس واضح با نور مناسب بهتر است.</p></div><img id="userPhoto" alt="پیش‌نمایش عکس انتخاب‌شده" hidden><input id="photoInput" type="file" accept="image/*" aria-label="انتخاب عکس"></div><label class="field-label" for="tryProduct">انتخاب لباس</label><select class="field" id="tryProduct"></select><label class="field-label">سایز موردنظر</label><div class="size-row" id="trySizes"><button class="size-choice" data-size="S">S</button><button class="size-choice active" data-size="M">M</button><button class="size-choice" data-size="L">L</button><button class="size-choice" data-size="XL">XL</button><button class="size-choice" data-size="XXL">XXL</button></div></div><div><label class="field-label">لباس انتخابی</label><div class="product-preview"><img id="tryProductImage" src="" alt="لباس انتخاب‌شده"><label id="tryProductLabel">محصول انتخابی</label></div><div class="demo-result" id="tryResult">این پیش‌نمایش نمایشی است. برای تولید تصویر واقعی که لباس را روی بدن شما قرار دهد، باید سرویس پرو مجازی هوش مصنوعی متصل شود.</div><button class="btn" id="generateTry" style="width:100%;margin-top:14px">ساخت پیش‌نمایش آزمایشی ✦</button><button class="btn outline" id="addTryProduct" style="width:100%;margin-top:9px">افزودن لباس به سبد</button></div></div></div></div>
 <div class="modal-backdrop" id="cartModal" role="dialog" aria-modal="true" aria-labelledby="cartTitle"><div class="modal"><button class="modal-close" data-close="cartModal" aria-label="بستن">×</button><h2 id="cartTitle">سبد خرید شما</h2><p class="modal-sub">محصولات انتخاب‌شده را بررسی کن.</p><div id="cartItems" class="cart-list"></div><div class="cart-total"><span>مجموع سفارش</span><span id="cartTotal">۰ تومان</span></div><button class="btn" id="checkoutBtn" style="width:100%">ادامه ثبت سفارش</button><p class="modal-sub" style="margin-top:10px">برای سفارش و پرداخت واقعی، اتصال سرور و درگاه پرداخت لازم است.</p></div></div>
